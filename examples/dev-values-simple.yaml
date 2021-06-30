@@ -17,6 +17,10 @@
 
 fullnameOverride: region2pulsar
 
+rbac:
+  create: true
+  clusterRoles: false
+
 enableAntiAffinity: no
 enableTls: no 
 enableTokenAuth: no
