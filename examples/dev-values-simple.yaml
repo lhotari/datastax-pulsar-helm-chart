@@ -20,6 +20,9 @@
 rbac:
   create: true
   clusterRoles: false
+  # workaround issue in creating Role for Pulsar Functions with namespace level admin access
+  function:
+    create: false
 
 enableAntiAffinity: no
 enableTls: no 
