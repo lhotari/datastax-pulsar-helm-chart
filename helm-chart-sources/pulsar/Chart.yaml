@@ -21,12 +21,12 @@ description: Apache Pulsar Helm chart for Kubernetes
 name: pulsar
 version: 1.0.5
 dependencies:
-- name: kube-prometheus-stack
-  version: 16.x.x
-  repository: https://prometheus-community.github.io/helm-charts
-  condition: kube-prometheus-stack.enabled
-- name: cert-manager
-  version: v1.1.x
-  repository: https://charts.jetstack.io 
-  condition: cert-manager.enabled
+# - name: kube-prometheus-stack
+#   version: 16.x.x
+#   repository: https://prometheus-community.github.io/helm-charts
+#   condition: kube-prometheus-stack.enabled
+# - name: cert-manager
+#   version: v1.1.x
+#   repository: https://charts.jetstack.io 
+#   condition: cert-manager.enabled
 
