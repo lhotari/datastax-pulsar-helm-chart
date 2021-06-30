@@ -24,6 +24,7 @@ rbac:
   function:
     create: false
 
+enableProvisionContainer: yes
 enableAntiAffinity: no
 enableTls: no 
 enableTokenAuth: no
@@ -31,10 +32,11 @@ restartOnConfigMapChange:
   enabled: yes
 extra:
   function: yes
-  burnell: no
+  burnell: yes
   burnellLogCollector: yes
-  pulsarHeartbeat: no
+  pulsarHeartbeat: yes
   pulsarAdminConsole: no
+  usedns: yes
 
 zookeeper:
   replicaCount: 3 
