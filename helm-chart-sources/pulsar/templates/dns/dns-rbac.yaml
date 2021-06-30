@@ -15,7 +15,7 @@
 #  
 # 
 
-{{- if and .Values.rbac.create .Values.extra.usedns }}
+{{- if and .Values.rbac.create .Values.rbac.dns.create .Values.extra.usedns }}
 apiVersion: v1
 kind: ServiceAccount
 metadata:

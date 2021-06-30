@@ -15,7 +15,7 @@
 #  
 # 
 
-{{- if and .Values.rbac.create .Values.extra.pulsarHeartbeat }}
+{{- if and .Values.rbac.create .Values.rbac.heartbeat.create .Values.extra.pulsarHeartbeat }}
 apiVersion: rbac.authorization.k8s.io/v1
 kind: {{ if .Values.rbac.clusterRoles }}ClusterRole{{ else }}Role{{ end }}
 metadata:

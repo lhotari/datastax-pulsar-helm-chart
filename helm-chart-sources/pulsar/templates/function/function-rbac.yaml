@@ -15,7 +15,7 @@
 #  
 # 
 
-{{- if and .Values.rbac.create .Values.extra.function }}
+{{- if and .Values.rbac.create .Values.rbac.function.create .Values.extra.function }}
 apiVersion: rbac.authorization.k8s.io/v1
 kind: {{ if .Values.rbac.clusterRoles }}ClusterRole{{ else }}Role{{ end }}
 metadata:

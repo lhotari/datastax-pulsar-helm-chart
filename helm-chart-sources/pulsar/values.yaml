@@ -31,6 +31,16 @@ rbac:
   # use ClusterRole and ClusterRoleBinding resources when set to true
   # use namespaced Role and RoleBinding resources when set to false
   clusterRoles: true
+  # component level RBAC creation
+  dns:
+    create: true
+  function:
+    create: true
+  burnell:
+    create: true
+  heartbeat:
+    create: true
+  
 
 # Global node selector
 # If set, this will apply to all components
