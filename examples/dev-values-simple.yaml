@@ -15,7 +15,11 @@
 #  
 # 
 
-fullnameOverride: region2pulsar
+#fullnameOverride: region2pulsar
+
+rbac:
+  create: true
+  clusterRoles: false
 
 enableAntiAffinity: no
 enableTls: no 
@@ -30,7 +34,7 @@ extra:
   pulsarAdminConsole: no
 
 zookeeper:
-  replicaCount: 3 
+  replicaCount: 1 
   resources:
     requests:
       memory: 300Mi
@@ -39,7 +43,7 @@ zookeeper:
     PULSAR_MEM: "\"-Xms300m -Xmx300m -Djute.maxbuffer=10485760 -XX:+ExitOnOutOfMemoryError\""
 
 bookkeeper:
-  replicaCount: 3 
+  replicaCount: 1 
   resources:
     requests:
       memory: 512Mi
@@ -49,7 +53,7 @@ bookkeeper:
 
 broker:
   component: broker
-  replicaCount: 3 
+  replicaCount: 1 
   ledger:
     defaultEnsembleSize: 1 
     defaultAckQuorum: 1 
