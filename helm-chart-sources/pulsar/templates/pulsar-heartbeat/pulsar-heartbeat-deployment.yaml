@@ -94,7 +94,7 @@ spec:
             {{- toYaml .Values.pulsarHeartbeat.resources | nindent 12 }}
           volumeMounts:
           - name: config-volume
-            mountPath: /config
+            mountPath: /home/config
           env:
           - name: DeployEnv
             value: production
