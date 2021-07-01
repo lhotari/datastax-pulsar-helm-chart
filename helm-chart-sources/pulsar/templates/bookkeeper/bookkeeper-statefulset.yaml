@@ -52,6 +52,8 @@ spec:
       {{- end }}
     spec:
       securityContext:
+        runAsUser: 10000
+        runAsGroup: 10001
         fsGroup: 10001
         fsGroupChangePolicy: "OnRootMismatch"
       {{- if .Values.priorityClass.enabled }}

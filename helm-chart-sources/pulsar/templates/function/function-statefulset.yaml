@@ -53,6 +53,8 @@ spec:
 {{ toYaml .Values.function.annotations | indent 8 }}
     spec:
       securityContext:
+        runAsUser: 10000
+        runAsGroup: 10001
         fsGroup: 10001
         fsGroupChangePolicy: "OnRootMismatch"
       {{- if .Values.priorityClass.enabled }}
