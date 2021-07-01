@@ -21,9 +21,6 @@ rbac:
   create: false
   clusterRoles: false
 
-fixRootlessPermissions:
-  enabled: true
-
 enableAntiAffinity: no
 enableTls: no 
 enableTokenAuth: no

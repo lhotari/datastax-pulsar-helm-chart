@@ -52,6 +52,9 @@ spec:
       {{- end }}
 {{ toYaml .Values.function.annotations | indent 8 }}
     spec:
+      securityContext:
+        fsGroup: 10001
+        fsGroupChangePolicy: "OnRootMismatch"
       {{- if .Values.priorityClass.enabled }}
       priorityClassName: pulsar-priority
       {{- end }}
