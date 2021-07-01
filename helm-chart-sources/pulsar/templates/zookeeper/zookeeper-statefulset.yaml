@@ -53,8 +53,8 @@ spec:
     spec:
       securityContext:
         runAsUser: 10000
-        runAsGroup: 10001
-        fsGroup: 10001
+        runAsGroup: 0
+        fsGroup: 0
         fsGroupChangePolicy: "OnRootMismatch"
       {{- if .Values.priorityClass.enabled }}
       priorityClassName: pulsar-priority
