@@ -30,7 +30,7 @@ extra:
   function: yes
   burnell: no
   burnellLogCollector: yes
-  pulsarHeartbeat: no
+  pulsarHeartbeat: yes
   pulsarAdminConsole: no
 
 zookeeper:
