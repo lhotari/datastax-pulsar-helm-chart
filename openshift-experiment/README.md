@@ -12,6 +12,8 @@ kubectl apply -f uid10000.yaml
 
 # delete existing pulsar project
 oc delete project pulsar
+# wait until deleted
+while oc get project pulsar; do sleep 2; done
 # create new project
 oc new-project pulsar   --description="pulsar" --display-name="pulsar"
 # add developer as admin
