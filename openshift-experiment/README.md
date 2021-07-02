@@ -32,3 +32,11 @@ oc adm policy add-scc-to-user uid1000 -z pulsar-pulsarheartbeat
 oc login -u developer -p developer https://api.crc.testing:6443
 helm install pulsar -f ../../examples/dev-values-simple.yaml .
 ```
+
+
+commands for deleting scc bindings
+```
+oc adm policy remove-scc-from-user uid10000 -z default
+oc adm policy remove-scc-from-user uid10000 -z pulsar-function
+oc adm policy remove-scc-from-user uid1000 -z pulsar-pulsarheartbeat
+```
