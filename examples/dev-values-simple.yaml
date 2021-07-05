@@ -28,10 +28,10 @@ restartOnConfigMapChange:
   enabled: yes
 extra:
   function: yes
-  burnell: no
+  burnell: yes
   burnellLogCollector: yes
   pulsarHeartbeat: yes
-  pulsarAdminConsole: no
+  pulsarAdminConsole: yes
 
 zookeeper:
   replicaCount: 1 
