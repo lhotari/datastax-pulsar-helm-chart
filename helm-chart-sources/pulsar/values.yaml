@@ -352,7 +352,7 @@ image:
   pulsarHeartbeat:
     repository: lhotari/pulsar-heartbeat
     pullPolicy: IfNotPresent
-    tag: rootless
+    tag: rootlessv2
   pulsarAdminConsole:
     repository: datastax/pulsar-admin-console
     pullPolicy: IfNotPresent
