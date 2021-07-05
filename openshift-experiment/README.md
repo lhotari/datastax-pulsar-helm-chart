@@ -21,4 +21,10 @@ oc adm policy add-role-to-user admin developer
 oc login -u developer -p developer https://api.crc.testing:6443
 # install local helm chart
 helm install pulsar -f ./examples/dev-values-simple.yaml ./helm-chart-sources/pulsar
+
+# wait for deployment, then expose route for admin console
+oc expose svc/pulsar-adminconsole
+# show routes
+oc get route
+# go to http://pulsar-adminconsole-pulsar.apps-crc.testing/ for admin console
 ```
