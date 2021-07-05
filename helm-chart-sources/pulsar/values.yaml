@@ -356,7 +356,7 @@ image:
   pulsarAdminConsole:
     repository: lhotari/pulsar-admin-console
     pullPolicy: IfNotPresent
-    tag: rootless
+    tag: rootlessv2
 
 
 ## Tiered Storage
