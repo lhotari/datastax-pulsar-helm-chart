@@ -42,7 +42,7 @@ createCertificates:
     enabled: yes
  
 zookeeper:
-  replicaCount: 2 
+  replicaCount: 1 
   resources:
     requests:
       memory: 300Mi
@@ -51,7 +51,7 @@ zookeeper:
     PULSAR_MEM: "\"-Xms300m -Xmx300m -Djute.maxbuffer=10485760 -XX:+ExitOnOutOfMemoryError\""
 
 bookkeeper:
-  replicaCount: 2 
+  replicaCount: 1 
   resources:
     requests:
       memory: 512Mi
@@ -61,7 +61,7 @@ bookkeeper:
 
 broker:
   component: broker
-  replicaCount: 2 
+  replicaCount: 1 
   ledger:
     defaultEnsembleSize: 1 
     defaultAckQuorum: 1 
