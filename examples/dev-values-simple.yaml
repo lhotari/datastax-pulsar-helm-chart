@@ -23,7 +23,7 @@ rbac:
 
 enableAntiAffinity: no
 enableTls: no 
-enableTokenAuth: no
+enableTokenAuth: yes
 restartOnConfigMapChange:
   enabled: yes
 extra:
@@ -66,6 +66,7 @@ broker:
     PULSAR_MEM: "\"-Xms400m -Xmx400m -XX:MaxDirectMemorySize=200m -XX:+ExitOnOutOfMemoryError\""
 
 autoRecovery:
+  enableProvisionContainer: true
   resources:
     requests:
       memory: 300Mi
