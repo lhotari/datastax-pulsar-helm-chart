@@ -350,9 +350,9 @@ image:
     pullPolicy: IfNotPresent
     tag: latest
   pulsarHeartbeat:
-    repository: lhotari/pulsar-heartbeat
+    repository: datastax/pulsar-heartbeat
     pullPolicy: IfNotPresent
-    tag: rootlessv2
+    tag: 1.0.4
   pulsarAdminConsole:
     repository: lhotari/pulsar-admin-console
     pullPolicy: IfNotPresent
