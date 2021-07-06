@@ -28,3 +28,33 @@ oc expose svc/pulsar-adminconsole
 oc get route
 # go to http://pulsar-adminconsole-pulsar.apps-crc.testing/ for admin console
 ```
+
+
+## Commands for testing Pulsar Functions
+
+Start port forwarding for Pulsar to pulsar-proxy service ports 8080 and 6650
+```
+kubectl port-forward service/pulsar-proxy 8080 6650
+```
+
+Deploy a python function
+```
+pulsar-admin functions create --name ptest --inputs ptest-in --output ptest-out --py $HOME/workspace-pulsar/apache-pulsar-2.8.0/examples/python-examples/exclamation_function.py --classname exclamation_function.ExclamationFunction
+```
+
+Consume messages (in one terminal window)
+```
+pulsar-client consume -s sub -n 0 ptest-out
+```
+
+Produce 10 message
+```
+pulsar-client produce -m "test message $(date)" -n 10 ptest-in
+```
+
+Uninstall function
+```
+pulsar-admin functions delete --name ptest
+```
+
+
