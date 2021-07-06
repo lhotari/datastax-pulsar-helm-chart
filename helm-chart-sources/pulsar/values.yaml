@@ -334,9 +334,9 @@ image:
     pullPolicy: IfNotPresent
     tag: 1.0.0
   burnell:
-    repository: datastax/burnell
+    repository: lhotari/burnell
     pullPolicy: Always
-    tag: latest
+    tag: dont-create-ns
   burnellLogCollector:
     repository: datastax/burnell
     pullPolicy: IfNotPresent
