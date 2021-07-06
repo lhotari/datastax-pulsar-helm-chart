@@ -19,6 +19,10 @@ oc adm policy add-role-to-user admin developer
 
 # switch to developer for deployment
 oc login -u developer -p developer https://api.crc.testing:6443
+
+# remove helm-charts-sources/pulsar/charts directory to prevent unwanted dependency to kube-prometheus-stack
+rm -rf helm-chart-sources/pulsar/charts
+
 # install local helm chart
 helm install pulsar -f ./examples/dev-values-simple.yaml ./helm-chart-sources/pulsar
 
