@@ -30,7 +30,11 @@ metadata:
     cluster: {{ template "pulsar.fullname" . }}
 spec:
   replicas: {{ .Values.brokerSts.replicaCount }}
+{{- if .Values.brokerSts.service.headless }}  
   serviceName: "{{ template "pulsar.fullname" . }}-{{ .Values.brokerSts.component }}"
+{{- else }}
+  serviceName: "{{ template "pulsar.fullname" . }}-{{ .Values.brokerSts.component }}-headless"
+{{- end }}  
   selector:
     matchLabels:
       app: {{ template "pulsar.name" . }}
